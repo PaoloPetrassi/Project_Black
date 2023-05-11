@@ -1,0 +1,239 @@
+body {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Orbitron', sans-serif;
+}
+
+:root{
+    
+    --blackC: black  ;
+    --whiteC: white;
+    --blueC: #2b9df4;
+}
+
+.textBlu {
+    color: var(--blueC);
+}
+
+.textWhite {
+    color: var(--whiteC);
+}
+
+.bgAll {
+    background-color: var(--blackC);
+}
+
+.luna {
+    font-size: 40px;
+    color: var(--whiteC);
+}
+
+
+.principale {
+    
+    height: 100vh;
+    background-color: var(--blackC);
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 1)), url(media/moon.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+hr {
+    border-color: var(--whiteC);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--whiteC);
+    font-weight: bolder;
+    font-size: 59px;
+}
+
+.scrittina {
+    font-size: 18px;
+}
+
+.robaRelative {
+    position: relative;
+}
+
+.colAbsolute{
+    position: absolute;
+    bottom: 10px;
+}
+
+.fa-chevron-down {
+    
+    color: var(--blueC);
+    font-size: 40px;
+    
+}
+
+.navbar-toggler{
+    color: var(--whiteC);
+    font-size: 35px;
+}
+
+.navbar-toggler-icon {
+    color: var(--whiteC);
+    
+}
+
+.sezione {
+    
+    background-color: black;
+    height: 75vh;
+    
+}
+
+.barraBlu {
+    
+    background-color: var(--blueC);
+    height: 1px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.numero {
+    
+    font-weight: 900;    
+    
+}
+
+.sezionedue{
+    
+    background-image: url(media/moon2.jpg);
+    background-size: 100%;
+    height: 75vh;
+    background-repeat: no-repeat;
+    
+}
+
+.iconcine {
+    
+    font-size: 25px;
+    color: var(--blueC);
+}
+
+.giustifica {
+    
+    text-align: justify;
+    text-justify:distribute-all-lines;
+    
+}
+
+.missile {
+    height: 125vh;
+    background-image: url(media/missile-2027068_1280.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.spazione {
+    padding-top: 150px !important;
+}
+
+
+
+.bottoncino {
+    width: 170px;
+    height: 50px;
+    background-color: var(--blackC);
+    color: var(--whiteC);
+    --b: 3px;
+    /* border width */
+    --c: 12px;
+    /* corner size */
+    position: relative;
+    border: solid var(--b) transparent;
+}
+
+.bottoncino::before {
+    position: absolute;
+    right:0;
+    inset: calc(-1*var(--b));
+    border: inherit;
+    background-color: var(--blueC);
+    --corner:
+    conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0)
+    0 0/ calc(100% - var(--c)) calc(100% - var(--c)) border-box;
+    --inner: conic-gradient(red 0 0) padding-box;
+    -webkit-mask: var(--corner), var(--inner);
+    /* -webkit-mask-composite: source-out; */
+    mask: var(--corner) subtract, var(--inner);
+    content:"";
+    
+}
+
+
+.sfondo {
+    height: 75vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 1)), url(media/sunrise-1765027_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.linea {
+    background: radial-gradient(circle at center, rgba(43,157,244,1) 5%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.9848272072500875) 40%);   
+    height: 4px;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 100px;    
+}
+
+
+@media screen and (max-width: 800px){
+
+    h1, .scrittina{
+        text-align: center;
+    }
+
+    .colAbsolute {
+        padding-bottom: 50px;
+    }
+
+    .titolino {
+
+        padding-top: 25px !important;
+
+    }
+
+    .loremConLuna {
+
+        padding-top: 110px !important;
+
+    }
+
+    .query {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .riduciti {
+        padding-top: 0px !important;
+    }
+
+    .spazietto {
+        padding-bottom: 50px;
+    }
+
+    .spaziettino {
+        padding-bottom: 5px !important;
+    }
+
+    .linea {
+
+        height: 3px;
+        background: radial-gradient(circle, rgba(43,157,244,1) 1%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0.9848272072500875) 40%);
+    
+    }
+
+}
